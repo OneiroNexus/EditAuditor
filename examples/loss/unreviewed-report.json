@@ -1,0 +1,93 @@
+{
+  "after": {
+    "blocks": 1,
+    "bytes": 42,
+    "sha256": "a5b6d44774f684cbfc2eb821a3c9ff8a3de0ebc33ee8b5eb23c03bf308428301"
+  },
+  "before": {
+    "blocks": 2,
+    "bytes": 76,
+    "sha256": "c4e06fe8daaeb81603ed417f272dc46c7706c9ce90d4fe17c1472453b607c9a6"
+  },
+  "findings": [],
+  "inventory": {
+    "after": [
+      {
+        "blank_lines_before": 0,
+        "content_sha256": "0cb01d93c348986e58fb54e61b326f50f37b7d4011a3269514d25b2ddd98f355",
+        "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "id": "a00001-0cb01d93c348",
+        "kind": "paragraph",
+        "line_end": 1,
+        "line_start": 1
+      }
+    ],
+    "before": [
+      {
+        "blank_lines_before": 0,
+        "content_sha256": "0cb01d93c348986e58fb54e61b326f50f37b7d4011a3269514d25b2ddd98f355",
+        "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "id": "b00001-0cb01d93c348",
+        "kind": "paragraph",
+        "line_end": 1,
+        "line_start": 1
+      },
+      {
+        "blank_lines_before": 1,
+        "content_sha256": "4d7e152b47263d01300e2189e468ddf62b2a59790d12c65af3054b1b1e056c40",
+        "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "id": "b00002-4d7e152b4726",
+        "kind": "paragraph",
+        "line_end": 3,
+        "line_start": 3
+      }
+    ]
+  },
+  "limitations": [
+    "Conservative segmentation, not a complete CommonMark/Notion AST or rendered-document comparison.",
+    "Literal coverage cannot establish truth, contextual meaning, authorship, or permission.",
+    "Human review is self-attested, not identity-authenticated or cryptographically signed.",
+    "Protected-token findings are heuristic; absence of findings is not proof of preservation.",
+    "New output content is listed as unmapped; it is not fact-checked or authorized.",
+    "Inputs are untrusted data. Links, code, and embedded directives are never executed."
+  ],
+  "meaning": "Unaccounted source blocks or unacknowledged findings remain.",
+  "privacy": {
+    "notice": "Fingerprints and document structure can still be sensitive. Reports are not anonymized.",
+    "source_paths_included": false,
+    "source_text_included": false
+  },
+  "raw_bytes_equal": false,
+  "records": [
+    {
+      "disposition": "preserved",
+      "human_approved": false,
+      "source_id": "b00001-0cb01d93c348",
+      "target_ids": [
+        "a00001-0cb01d93c348"
+      ]
+    },
+    {
+      "disposition": "unaccounted",
+      "duplicate_candidates": [],
+      "human_approved": false,
+      "source_id": "b00002-4d7e152b4726",
+      "target_ids": []
+    }
+  ],
+  "review_sha256": null,
+  "schema_version": "1.0",
+  "status": "NEEDS_REVIEW",
+  "summary": {
+    "absorbed": 0,
+    "acknowledged_findings": 0,
+    "duplicate": 0,
+    "preserved": 1,
+    "unaccounted": 1,
+    "unacknowledged_findings": 0,
+    "unmapped_output_blocks": 0
+  },
+  "tool": "Edit Auditor",
+  "tool_version": "0.1.0",
+  "unmapped_output_ids": []
+}

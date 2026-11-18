@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "Please cite the exact software version used."
+title: "Edit Auditor: Preservation-First Markdown Auditing"
+type: software
+version: 0.1.0
+authors:
+  - family-names: Weis
+    given-names: Aaron Michael
+    orcid: "https://orcid.org/0009-0002-1906-148X"
+abstract: "A local, dependency-free auditor that records literal preservation, explicitly reviewed duplicate or absorbed content, and unaccounted Markdown blocks. Reviews are bound to exact document snapshots. Reviewed coverage is not proof of semantic equivalence."
+keywords:
+  - document preservation
+  - Markdown
+  - human review
+  - reproducibility
+  - AI-assisted editing
+license: MIT
+repository-code: "https://github.com/OneiroNexus/EditAuditor"

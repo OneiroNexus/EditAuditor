@@ -1,0 +1,29 @@
+{
+  "acknowledgements": [],
+  "after_sha256": "8d2d7a55fbee5924a57b73cdca8cb823c5870db15328785a1557199f84e4a428",
+  "before_sha256": "704e24a6db48782df090dac3d6cf503464a0e304ca9593418ab43c594a8313ec",
+  "created_with": "Edit Auditor 0.1.0",
+  "decisions": [
+    {
+      "approved": true,
+      "disposition": "absorbed",
+      "rationale": "Demonstration record, not an approval of any real document.",
+      "reviewer": "Fictional reviewer — synthetic example only",
+      "source_id": "b00001-6d6275182d43",
+      "target_ids": [
+        "a00001-bd86b960878c"
+      ]
+    },
+    {
+      "approved": true,
+      "disposition": "absorbed",
+      "rationale": "Demonstration record, not an approval of any real document.",
+      "reviewer": "Fictional reviewer — synthetic example only",
+      "source_id": "b00002-bccc1b44c3e5",
+      "target_ids": [
+        "a00001-bd86b960878c"
+      ]
+    }
+  ],
+  "schema_version": "1.0"
+}

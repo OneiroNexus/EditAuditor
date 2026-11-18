@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+validation-runs/
+build-runs/
+*.egg-info/
+.pytest_cache/
+audit-report.json
+review-draft.json
+review-expanded.json

@@ -1,0 +1,41 @@
+name: Verify EditAuditor
+on: [push, pull_request]
+permissions:
+  contents: read
+jobs:
+  verify:
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-24.04
+            python: '3.10'
+            options: ''
+          - os: ubuntu-24.04
+            python: '3.13'
+            options: ''
+          - os: windows-2025
+            python: '3.12'
+            options: '--allow-windows-platform-skips'
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python tools/validate.py ${{ matrix.options }}
+      - shell: pwsh
+        run: |
+          python tools/build_release.py
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          $folder = @(Get-ChildItem build-runs -Directory)
+          if ($folder.Count -ne 1) { throw 'Expected exactly one build directory' }
+          python tools/check_artifacts.py $folder[0].FullName
+          exit $LASTEXITCODE
+      - uses: actions/upload-artifact@v6
+        if: always()
+        with:
+          name: editauditor-${{ matrix.os }}-${{ matrix.python }}
+          path: |
+            validation-runs/
+            build-runs/*/packaging-checks.json

@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.0",
+  "scope": "Release preparation and document QA; not independent review, legal validation, prior-art verification, or live platform validation.",
+  "checks": {
+    "code_matches_recorded_validation": true,
+    "fixtures_match_recorded_validation": true,
+    "evidence_counts_reconciled": true,
+    "citation_author_and_orcid_consistent": true,
+    "author_supplied_orcid_check_digit": true,
+    "no_invented_release_identifier": true,
+    "metadata_drafts_parse": true,
+    "repository_markdown_links_resolve_locally": true,
+    "no_network_or_subprocess_import_in_runtime": true,
+    "public_candidate_has_no_workspace_urls_or_build_paths": true,
+    "paper_eight_pages": true,
+    "paper_author_and_orcid_present": true,
+    "paper_numbers_match_evidence": true,
+    "paper_text_inside_page_bounds": true,
+    "paper_text_color_pairs_meet_aa": true,
+    "all_pdf_pages_visually_inspected": true
+  },
+  "all_passed": true,
+  "visual_inspection": "All eight rendered pages individually inspected; no clipping, overlap, orphan-page spill, or unreadable tables found.",
+  "contrast_ratios": {
+    "2C2C2B/FFFFFF": 13.979022254433707,
+    "525860/FFFFFF": 7.183016780719057,
+    "155F9B/FFFFFF": 6.683468598940114,
+    "2C2C2B/F1F6FA": 12.8493087863507
+  },
+  "paper_sha256": "1a6707488106332e2324df1a196c9cb10596f1eeb9b5b8ff882392982bb4e934",
+  "exceptions": {
+    "broken_links": [],
+    "private_links": [],
+    "overflow_pages": []
+  }
+}

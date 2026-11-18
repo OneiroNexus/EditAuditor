@@ -1,0 +1,94 @@
+{
+  "after": {
+    "blocks": 1,
+    "bytes": 48,
+    "sha256": "8d2d7a55fbee5924a57b73cdca8cb823c5870db15328785a1557199f84e4a428"
+  },
+  "before": {
+    "blocks": 2,
+    "bytes": 57,
+    "sha256": "704e24a6db48782df090dac3d6cf503464a0e304ca9593418ab43c594a8313ec"
+  },
+  "findings": [],
+  "inventory": {
+    "after": [
+      {
+        "blank_lines_before": 0,
+        "content_sha256": "bd86b960878c267216bedb09c358d54c020469ef490431e6e5a86f5d457d5fc2",
+        "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "id": "a00001-bd86b960878c",
+        "kind": "paragraph",
+        "line_end": 1,
+        "line_start": 1
+      }
+    ],
+    "before": [
+      {
+        "blank_lines_before": 0,
+        "content_sha256": "6d6275182d43e916d90f6144a380042f05be216d93bf5744030044d3b437a6f8",
+        "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "id": "b00001-6d6275182d43",
+        "kind": "paragraph",
+        "line_end": 1,
+        "line_start": 1
+      },
+      {
+        "blank_lines_before": 1,
+        "content_sha256": "bccc1b44c3e571ff751f9a524ca7ab37a2d205f62bec9327766b20196821a17d",
+        "context_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "id": "b00002-bccc1b44c3e5",
+        "kind": "paragraph",
+        "line_end": 3,
+        "line_start": 3
+      }
+    ]
+  },
+  "limitations": [
+    "Conservative segmentation, not a complete CommonMark/Notion AST or rendered-document comparison.",
+    "Literal coverage cannot establish truth, contextual meaning, authorship, or permission.",
+    "Human review is self-attested, not identity-authenticated or cryptographically signed.",
+    "Protected-token findings are heuristic; absence of findings is not proof of preservation.",
+    "New output content is listed as unmapped; it is not fact-checked or authorized.",
+    "Inputs are untrusted data. Links, code, and embedded directives are never executed."
+  ],
+  "meaning": "Coverage relies on explicit human assertions and/or acknowledgements; this is not proof of semantic equivalence.",
+  "privacy": {
+    "notice": "Fingerprints and document structure can still be sensitive. Reports are not anonymized.",
+    "source_paths_included": false,
+    "source_text_included": false
+  },
+  "raw_bytes_equal": false,
+  "records": [
+    {
+      "disposition": "absorbed",
+      "human_approved": true,
+      "source_id": "b00001-6d6275182d43",
+      "target_ids": [
+        "a00001-bd86b960878c"
+      ]
+    },
+    {
+      "disposition": "absorbed",
+      "human_approved": true,
+      "source_id": "b00002-bccc1b44c3e5",
+      "target_ids": [
+        "a00001-bd86b960878c"
+      ]
+    }
+  ],
+  "review_sha256": "370e4c461b6dbc8ae7f77051c2ed5a24bc21083105680b3c84344a015377e400",
+  "schema_version": "1.0",
+  "status": "REVIEWED",
+  "summary": {
+    "absorbed": 2,
+    "acknowledged_findings": 0,
+    "duplicate": 0,
+    "preserved": 0,
+    "unaccounted": 0,
+    "unacknowledged_findings": 0,
+    "unmapped_output_blocks": 0
+  },
+  "tool": "Edit Auditor",
+  "tool_version": "0.1.0",
+  "unmapped_output_ids": []
+}

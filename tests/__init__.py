@@ -1,0 +1,1 @@
+"""Synthetic-only tests. No workspace documents or private data."""

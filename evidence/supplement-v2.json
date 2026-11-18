@@ -1,0 +1,84 @@
+{
+  "software_version": "0.1.0",
+  "supplement_version": 2,
+  "run_utc": "2026-11-17T22:31:27.029434+00:00",
+  "scope": "Documentation-only additive checks; no legal or semantic validation.",
+  "release_document_audits": {
+    "release/LICENSING_DECISION.md": {
+      "status": "COVERED",
+      "summary": {
+        "preserved": 13,
+        "duplicate": 0,
+        "absorbed": 0,
+        "unaccounted": 0,
+        "unacknowledged_findings": 0,
+        "acknowledged_findings": 0,
+        "unmapped_output_blocks": 3
+      },
+      "prefix_byte_identical": true,
+      "before": {
+        "blocks": 13,
+        "bytes": 2467,
+        "sha256": "7a2458c6754519adc65df0fef752fd332922297fe06739fbee7a364c14e3ab13"
+      },
+      "after": {
+        "blocks": 16,
+        "bytes": 3041,
+        "sha256": "82a8085c56edf7fa39819a54700aff8c975c9d5b0e8208c5fa1b9a6c504111dd"
+      },
+      "review_used": false
+    },
+    "release/RELEASE_PREPARATION.md": {
+      "status": "COVERED",
+      "summary": {
+        "preserved": 26,
+        "duplicate": 0,
+        "absorbed": 0,
+        "unaccounted": 0,
+        "unacknowledged_findings": 0,
+        "acknowledged_findings": 0,
+        "unmapped_output_blocks": 3
+      },
+      "prefix_byte_identical": true,
+      "before": {
+        "blocks": 26,
+        "bytes": 2981,
+        "sha256": "8a06c23fb24f4ea944b2f98044e07a035dc9d26bf56a69d976581878c09db385"
+      },
+      "after": {
+        "blocks": 29,
+        "bytes": 3555,
+        "sha256": "1307f0ddac7be60644744102bdab0ec11e86fe78591d962d8785e038f9307852"
+      },
+      "review_used": false
+    }
+  },
+  "all_previous_repository_files_retained": true,
+  "previous_files_changed_only_by_append": [
+    "release/LICENSING_DECISION.md",
+    "release/RELEASE_PREPARATION.md"
+  ],
+  "original_license_byte_identical": true,
+  "recorded_code_and_fixture_hashes_unchanged": 20,
+  "blank_evidence_json_parsed": true,
+  "fresh_validation": {
+    "receipt": "supplement-v2-validation.json",
+    "all_expected_checks_passed": true,
+    "unit_tests": 95,
+    "authored_scenarios": 36,
+    "generated_checks": 256
+  },
+  "draft_file_checks": {
+    "valid_blank_json": true,
+    "relative_links_resolve": true,
+    "no_private_workspace_urls_or_local_paths": true,
+    "not_legal_review": true
+  },
+  "added_files": {
+    "release/EditAuditor_PermissionsAndEvidence_DRAFT_v1.md": "1ed50a20a28e03aecffac1c5041a8d6ba7b2c76ebf837126045f1af27ca09f92",
+    "release/EditAuditor_AIUseNotice_UNISSUED_v1.md": "3df7e6fafe2c07c898c2f422311bcb1618096f9ff4be06a5e6258085e1318357",
+    "release/EditAuditor_EvidenceRecord_TEMPLATE_v1.json": "c7b2d0582f4415510997e8b8b3eb0c43d12ddc449b87c4d99858d5aa8dfa17ba",
+    "release/SUPPLEMENT_v2.md": "1124256ee067723d2cdc02f1cc788ebfed1c0ddb87cc899ef86cd763c2a29427"
+  },
+  "completed_utc": "2026-11-17T22:32:42.027712+00:00"
+}

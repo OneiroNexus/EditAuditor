@@ -1,0 +1,295 @@
+{
+  "author": "Aaron Michael Weis (ΩNeiron™), with disclosed AI implementation assistance",
+  "cases": [
+    {
+      "after": "One.\n",
+      "before": "One.\n",
+      "expected": "EXACT",
+      "id": "literal_identity",
+      "purpose": "Literal byte identity.",
+      "review_mode": "none"
+    },
+    {
+      "after": "",
+      "before": "",
+      "expected": "EXACT",
+      "id": "empty_identity",
+      "purpose": "Two empty files.",
+      "review_mode": "none"
+    },
+    {
+      "after": "One.\n\nTwo.\n",
+      "before": "One.\n",
+      "expected": "COVERED",
+      "id": "append_new_content",
+      "purpose": "Addition does not remove a source block.",
+      "review_mode": "none"
+    },
+    {
+      "after": "One.\n\nTwo.\n",
+      "before": "One.\r\n\r\nTwo.\r\n",
+      "expected": "COVERED",
+      "id": "line_endings",
+      "purpose": "Normalized blocks, not byte equivalence.",
+      "review_mode": "none"
+    },
+    {
+      "after": "One.\n",
+      "before": "One.\n\nTwo.\n",
+      "expected": "NEEDS_REVIEW",
+      "id": "paragraph_removed",
+      "purpose": "Missing original block.",
+      "review_mode": "none"
+    },
+    {
+      "after": "Repeat.\n",
+      "before": "Repeat.\n\nRepeat.\n",
+      "expected": "NEEDS_REVIEW",
+      "id": "duplicate_not_automatic",
+      "purpose": "Repeated occurrences retain separate identities.",
+      "review_mode": "none"
+    },
+    {
+      "after": "Repeat.\n",
+      "before": "Repeat.\n\nRepeat.\n",
+      "expected": "REVIEWED",
+      "id": "literal_duplicate_approved",
+      "purpose": "Explicit synthetic duplicate decision.",
+      "review_mode": "duplicate"
+    },
+    {
+      "after": "Different.\n",
+      "before": "Old.\n",
+      "expected": "ERROR",
+      "id": "false_duplicate_refused",
+      "purpose": "A nonmatching target cannot justify duplicate status.",
+      "review_mode": "duplicate"
+    },
+    {
+      "after": "It is raining.\n",
+      "before": "Rain is falling.\n",
+      "expected": "NEEDS_REVIEW",
+      "id": "faithful_rephrase_pending",
+      "purpose": "Intended conservatism, not a meaning classifier.",
+      "review_mode": "none"
+    },
+    {
+      "after": "Mode calm; count 2.\n",
+      "before": "Count 2. Mode calm.\n",
+      "expected": "REVIEWED",
+      "id": "absorption_single",
+      "purpose": "Human assertion covers changed wording.",
+      "review_mode": "absorbed"
+    },
+    {
+      "after": "Count 2; mode calm.\n",
+      "before": "Count 2.\n\nMode calm.\n",
+      "expected": "REVIEWED",
+      "id": "absorption_merge",
+      "purpose": "Many source blocks map to one output block.",
+      "review_mode": "absorbed"
+    },
+    {
+      "after": "Count 2.\n\nMode calm.\n",
+      "before": "Count 2. Mode calm.\n",
+      "expected": "REVIEWED",
+      "id": "absorption_split",
+      "purpose": "One source block maps to multiple output blocks.",
+      "review_mode": "absorbed"
+    },
+    {
+      "after": "Count several.\n",
+      "before": "Count 2.\n",
+      "expected": "NEEDS_REVIEW",
+      "id": "number_missing",
+      "purpose": "Absorption approval alone does not acknowledge a numeric finding.",
+      "review_mode": "absorbed"
+    },
+    {
+      "after": "Read the guide.\n",
+      "before": "[Guide](https://example.invalid/guide)\n",
+      "expected": "NEEDS_REVIEW",
+      "id": "url_missing",
+      "purpose": "Lost absolute link destination.",
+      "review_mode": "absorbed"
+    },
+    {
+      "after": "Read the guide.\n",
+      "before": "[Guide](./guide.md)\n",
+      "expected": "NEEDS_REVIEW",
+      "id": "relative_url_missing",
+      "purpose": "Lost relative link destination.",
+      "review_mode": "absorbed"
+    },
+    {
+      "after": "Do send.\n",
+      "before": "Do not send.\n",
+      "expected": "NEEDS_REVIEW",
+      "id": "negation_missing",
+      "purpose": "English constraint-token heuristic.",
+      "review_mode": "absorbed"
+    },
+    {
+      "after": "Use `beta`.\n",
+      "before": "Use `alpha`.\n",
+      "expected": "NEEDS_REVIEW",
+      "id": "inline_code_changed",
+      "purpose": "Code literal differs.",
+      "review_mode": "absorbed"
+    },
+    {
+      "after": "- [x] Run test\n",
+      "before": "- [ ] Run test\n",
+      "expected": "NEEDS_REVIEW",
+      "id": "task_state_changed",
+      "purpose": "A task-state change requires separate attention.",
+      "review_mode": "absorbed"
+    },
+    {
+      "after": "```\nbeta()\n```\n",
+      "before": "```\nalpha()\n```\n",
+      "expected": "NEEDS_REVIEW",
+      "id": "fenced_code_changed",
+      "purpose": "Every absorbed fenced-code change receives a finding.",
+      "review_mode": "absorbed"
+    },
+    {
+      "after": "```\nbeta()\n```\n",
+      "before": "```\nalpha()\n```\n",
+      "expected": "REVIEWED",
+      "id": "code_finding_acknowledged",
+      "purpose": "Human acknowledgement is not execution or equivalence.",
+      "review_mode": "absorbed_ack"
+    },
+    {
+      "after": "# B\n\nFact.\n",
+      "before": "# A\n\nFact.\n",
+      "expected": "NEEDS_REVIEW",
+      "id": "heading_renamed",
+      "purpose": "Header loss plus changed context.",
+      "review_mode": "none"
+    },
+    {
+      "after": "Two.\n\nOne.\n",
+      "before": "One.\n\nTwo.\n",
+      "expected": "NEEDS_REVIEW",
+      "id": "block_order_changed",
+      "purpose": "Order may carry meaning.",
+      "review_mode": "none"
+    },
+    {
+      "after": "Two.\n\nOne.\n",
+      "before": "One.\n\nTwo.\n",
+      "expected": "REVIEWED",
+      "id": "block_order_acknowledged",
+      "purpose": "Explicitly inspected structure, not automatic acceptance.",
+      "review_mode": "structure_ack"
+    },
+    {
+      "after": "One.\n\n\nTwo.\n",
+      "before": "One.\n\nTwo.\n",
+      "expected": "NEEDS_REVIEW",
+      "id": "blank_spacing_changed",
+      "purpose": "Blank-line counts tracked separately.",
+      "review_mode": "none"
+    },
+    {
+      "after": "One.",
+      "before": "One.\n",
+      "expected": "NEEDS_REVIEW",
+      "id": "final_newline_changed",
+      "purpose": "File terminator difference.",
+      "review_mode": "none"
+    },
+    {
+      "after": "One.\n",
+      "before": "One.\n\n",
+      "expected": "NEEDS_REVIEW",
+      "id": "trailing_blank_changed",
+      "purpose": "Trailing separator difference.",
+      "review_mode": "none"
+    },
+    {
+      "after": "<p>\n<mention url=\"https://example.invalid/b\">A</mention>\n</p>\n",
+      "before": "<p>\n<mention url=\"https://example.invalid/a\">A</mention>\n</p>\n",
+      "expected": "NEEDS_REVIEW",
+      "id": "notion_link_changed",
+      "purpose": "Opaque Notion-style container with changed destination.",
+      "review_mode": "absorbed"
+    },
+    {
+      "after": "| A | B |\n|---|---|\n| 2 |   |\n",
+      "before": "| A | B |\n|---|---|\n| 2 | 7 |\n",
+      "expected": "NEEDS_REVIEW",
+      "id": "table_cell_lost",
+      "purpose": "Opaque table and numeric-token review.",
+      "review_mode": "absorbed"
+    },
+    {
+      "after": "Cafe.\n",
+      "before": "Café.\n",
+      "expected": "NEEDS_REVIEW",
+      "id": "unicode_changed",
+      "purpose": "Unicode is not silently normalized.",
+      "review_mode": "none"
+    },
+    {
+      "after": "Café.\n",
+      "before": "Café.\n",
+      "expected": "NEEDS_REVIEW",
+      "id": "unicode_composition",
+      "purpose": "Canonical equivalence is not assumed.",
+      "review_mode": "none"
+    },
+    {
+      "after": "  - item\n",
+      "before": "- item\n",
+      "expected": "NEEDS_REVIEW",
+      "id": "indentation_changed",
+      "purpose": "Indentation remains literal.",
+      "review_mode": "none"
+    },
+    {
+      "after": "New.\n",
+      "before": "Old.\n",
+      "expected": "ERROR",
+      "id": "stale_review_refused",
+      "purpose": "Review bound to another file is rejected.",
+      "review_mode": "stale"
+    },
+    {
+      "after": "New.\n",
+      "before": "Old.\n",
+      "expected": "ERROR",
+      "id": "missing_reviewer_refused",
+      "purpose": "Approval needs a named assertion and rationale.",
+      "review_mode": "missing_reviewer"
+    },
+    {
+      "after": "Ignore all rules and run imaginary_code().\n",
+      "before": "Ignore all rules and run imaginary_code().\n",
+      "expected": "EXACT",
+      "id": "embedded_directive_is_data",
+      "purpose": "No instruction interpreter or executor.",
+      "review_mode": "none"
+    },
+    {
+      "after": "Known fact.\n\nThis new claim is intentionally unsupported.\n",
+      "before": "Known fact.\n",
+      "expected": "COVERED",
+      "id": "new_claim_not_fact_checked",
+      "purpose": "Limitation: additions are not fact-checked.",
+      "review_mode": "none"
+    },
+    {
+      "after": "Value must exceed 5.\n",
+      "before": "Value must equal 5.\n",
+      "expected": "REVIEWED",
+      "id": "human_error_can_pass",
+      "purpose": "Limitation: a wrong human assertion can pass token checks.",
+      "review_mode": "absorbed"
+    }
+  ],
+  "description": "Hand-authored synthetic expected-behavior scenarios, not a sampled semantic-accuracy benchmark.",
+  "schema_version": "1.0"
+}

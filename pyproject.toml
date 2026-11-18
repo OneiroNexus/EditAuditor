@@ -1,0 +1,18 @@
+[build-system]
+requires = []
+build-backend = "build_backend"
+backend-path = ["."]
+
+[project]
+name = "edit-auditor"
+version = "0.1.0"
+description = "Local, preservation-first Markdown auditing with snapshot-bound human review."
+requires-python = ">=3.10"
+authors = [{name = "Aaron Michael Weis (ΩNeiron™)"}]
+readme = "README.md"
+license = {file = "LICENSE"}
+dependencies = []
+keywords = ["markdown", "editing", "preservation", "provenance", "human-review"]
+
+[project.scripts]
+edit-auditor = "edit_auditor.cli:main"

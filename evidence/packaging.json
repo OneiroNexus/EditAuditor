@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "project": "Edit Auditor",
+  "version": "0.1.0",
+  "scope": "Offline packaging smoke checks in the recorded build environment; not cross-platform validation.",
+  "checks": {
+    "zipapp_runs_outside_repository": true,
+    "wheel_offline_install_and_run": true,
+    "installed_console_entry_point": true,
+    "sdist_offline_build_matches_wheel": true,
+    "smoke_input_files_unchanged": true,
+    "bundle_manifest_complete_and_valid": true,
+    "wheel_code_matches_repository": true,
+    "zipapp_code_matches_repository": true
+  },
+  "all_passed": true,
+  "artifacts": {
+    "edit_auditor-0.1.0-py3-none-any.whl": "a28807cb84795045ec32be73c9ea31323cb34aaacd12fa037c7bdd16c4d53cd7",
+    "EditAuditor_Tool_v1.pyz": "348b103ef69cd4c66d186536f4b5255be3f6d997acab54aaa68917909e0d1636"
+  }
+}

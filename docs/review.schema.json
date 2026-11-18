@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Edit Auditor review, schema 1.0",
+  "description": "Structural aid only. Runtime validation additionally checks snapshot hashes, occurrence IDs, literal duplicate equality, acknowledgement membership, and uniqueness by source/finding ID.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "before_sha256", "after_sha256", "decisions", "acknowledgements"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "created_with": {"type": "string", "maxLength": 256},
+    "before_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "after_sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "decisions": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["source_id", "disposition", "target_ids", "approved", "reviewer", "rationale"],
+        "properties": {
+          "source_id": {"type": "string", "pattern": "^b[0-9]{5}-[0-9a-f]{12}$"},
+          "disposition": {"enum": ["duplicate", "absorbed"]},
+          "target_ids": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {"type": "string", "pattern": "^a[0-9]{5}-[0-9a-f]{12}$"}
+          },
+          "approved": {"type": "boolean"},
+          "reviewer": {"type": "string", "maxLength": 10000},
+          "rationale": {"type": "string", "maxLength": 10000}
+        },
+        "allOf": [
+          {
+            "if": {"properties": {"approved": {"const": true}}},
+            "then": {
+              "properties": {
+                "target_ids": {"minItems": 1},
+                "reviewer": {"pattern": "\\S"},
+                "rationale": {"pattern": "\\S"}
+              }
+            }
+          },
+          {
+            "if": {"properties": {"approved": {"const": true}, "disposition": {"const": "duplicate"}}},
+            "then": {"properties": {"target_ids": {"maxItems": 1}}}
+          }
+        ]
+      }
+    },
+    "acknowledgements": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["finding_id", "approved", "reviewer", "rationale"],
+        "properties": {
+          "finding_id": {"type": "string", "pattern": "^f-[0-9a-f]{20}$"},
+          "approved": {"type": "boolean"},
+          "reviewer": {"type": "string", "maxLength": 10000},
+          "rationale": {"type": "string", "maxLength": 10000}
+        },
+        "if": {"properties": {"approved": {"const": true}}},
+        "then": {"properties": {"reviewer": {"pattern": "\\S"}, "rationale": {"pattern": "\\S"}}}
+      }
+    }
+  }
+}

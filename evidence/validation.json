@@ -1,0 +1,2031 @@
+{
+  "all_expected_checks_passed": true,
+  "authored_corpus": {
+    "cases": [
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "finding_kinds": [],
+        "id": "literal_identity",
+        "matched_expectation": true,
+        "purpose": "Literal byte identity."
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "finding_kinds": [],
+        "id": "empty_identity",
+        "matched_expectation": true,
+        "purpose": "Two empty files."
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "finding_kinds": [],
+        "id": "append_new_content",
+        "matched_expectation": true,
+        "purpose": "Addition does not remove a source block."
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "finding_kinds": [],
+        "id": "line_endings",
+        "matched_expectation": true,
+        "purpose": "Normalized blocks, not byte equivalence."
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "finding_kinds": [],
+        "id": "paragraph_removed",
+        "matched_expectation": true,
+        "purpose": "Missing original block."
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "finding_kinds": [],
+        "id": "duplicate_not_automatic",
+        "matched_expectation": true,
+        "purpose": "Repeated occurrences retain separate identities."
+      },
+      {
+        "actual": "REVIEWED",
+        "expected": "REVIEWED",
+        "finding_kinds": [],
+        "id": "literal_duplicate_approved",
+        "matched_expectation": true,
+        "purpose": "Explicit synthetic duplicate decision."
+      },
+      {
+        "actual": "ERROR",
+        "expected": "ERROR",
+        "finding_kinds": [],
+        "id": "false_duplicate_refused",
+        "matched_expectation": true,
+        "purpose": "A nonmatching target cannot justify duplicate status."
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "finding_kinds": [],
+        "id": "faithful_rephrase_pending",
+        "matched_expectation": true,
+        "purpose": "Intended conservatism, not a meaning classifier."
+      },
+      {
+        "actual": "REVIEWED",
+        "expected": "REVIEWED",
+        "finding_kinds": [],
+        "id": "absorption_single",
+        "matched_expectation": true,
+        "purpose": "Human assertion covers changed wording."
+      },
+      {
+        "actual": "REVIEWED",
+        "expected": "REVIEWED",
+        "finding_kinds": [],
+        "id": "absorption_merge",
+        "matched_expectation": true,
+        "purpose": "Many source blocks map to one output block."
+      },
+      {
+        "actual": "REVIEWED",
+        "expected": "REVIEWED",
+        "finding_kinds": [],
+        "id": "absorption_split",
+        "matched_expectation": true,
+        "purpose": "One source block maps to multiple output blocks."
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "finding_kinds": [
+          "missing_number"
+        ],
+        "id": "number_missing",
+        "matched_expectation": true,
+        "purpose": "Absorption approval alone does not acknowledge a numeric finding."
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "finding_kinds": [
+          "missing_link_target"
+        ],
+        "id": "url_missing",
+        "matched_expectation": true,
+        "purpose": "Lost absolute link destination."
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "finding_kinds": [
+          "missing_link_target"
+        ],
+        "id": "relative_url_missing",
+        "matched_expectation": true,
+        "purpose": "Lost relative link destination."
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "finding_kinds": [
+          "missing_constraint_word"
+        ],
+        "id": "negation_missing",
+        "matched_expectation": true,
+        "purpose": "English constraint-token heuristic."
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "finding_kinds": [
+          "missing_inline_code"
+        ],
+        "id": "inline_code_changed",
+        "matched_expectation": true,
+        "purpose": "Code literal differs."
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "finding_kinds": [
+          "missing_task_state"
+        ],
+        "id": "task_state_changed",
+        "matched_expectation": true,
+        "purpose": "A task-state change requires separate attention."
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "finding_kinds": [
+          "code_block_changed",
+          "missing_inline_code"
+        ],
+        "id": "fenced_code_changed",
+        "matched_expectation": true,
+        "purpose": "Every absorbed fenced-code change receives a finding."
+      },
+      {
+        "actual": "REVIEWED",
+        "expected": "REVIEWED",
+        "finding_kinds": [
+          "code_block_changed",
+          "missing_inline_code"
+        ],
+        "id": "code_finding_acknowledged",
+        "matched_expectation": true,
+        "purpose": "Human acknowledgement is not execution or equivalence."
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "finding_kinds": [
+          "heading_context_changed"
+        ],
+        "id": "heading_renamed",
+        "matched_expectation": true,
+        "purpose": "Header loss plus changed context."
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "finding_kinds": [
+          "block_spacing_changed",
+          "preserved_block_order_changed"
+        ],
+        "id": "block_order_changed",
+        "matched_expectation": true,
+        "purpose": "Order may carry meaning."
+      },
+      {
+        "actual": "REVIEWED",
+        "expected": "REVIEWED",
+        "finding_kinds": [
+          "block_spacing_changed",
+          "preserved_block_order_changed"
+        ],
+        "id": "block_order_acknowledged",
+        "matched_expectation": true,
+        "purpose": "Explicitly inspected structure, not automatic acceptance."
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "finding_kinds": [
+          "block_spacing_changed"
+        ],
+        "id": "blank_spacing_changed",
+        "matched_expectation": true,
+        "purpose": "Blank-line counts tracked separately."
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "finding_kinds": [
+          "final_newline_changed"
+        ],
+        "id": "final_newline_changed",
+        "matched_expectation": true,
+        "purpose": "File terminator difference."
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "finding_kinds": [
+          "trailing_blank_lines_changed"
+        ],
+        "id": "trailing_blank_changed",
+        "matched_expectation": true,
+        "purpose": "Trailing separator difference."
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "finding_kinds": [
+          "missing_link_target"
+        ],
+        "id": "notion_link_changed",
+        "matched_expectation": true,
+        "purpose": "Opaque Notion-style container with changed destination."
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "finding_kinds": [
+          "missing_number"
+        ],
+        "id": "table_cell_lost",
+        "matched_expectation": true,
+        "purpose": "Opaque table and numeric-token review."
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "finding_kinds": [],
+        "id": "unicode_changed",
+        "matched_expectation": true,
+        "purpose": "Unicode is not silently normalized."
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "finding_kinds": [],
+        "id": "unicode_composition",
+        "matched_expectation": true,
+        "purpose": "Canonical equivalence is not assumed."
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "finding_kinds": [],
+        "id": "indentation_changed",
+        "matched_expectation": true,
+        "purpose": "Indentation remains literal."
+      },
+      {
+        "actual": "ERROR",
+        "expected": "ERROR",
+        "finding_kinds": [],
+        "id": "stale_review_refused",
+        "matched_expectation": true,
+        "purpose": "Review bound to another file is rejected."
+      },
+      {
+        "actual": "ERROR",
+        "expected": "ERROR",
+        "finding_kinds": [],
+        "id": "missing_reviewer_refused",
+        "matched_expectation": true,
+        "purpose": "Approval needs a named assertion and rationale."
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "finding_kinds": [],
+        "id": "embedded_directive_is_data",
+        "matched_expectation": true,
+        "purpose": "No instruction interpreter or executor."
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "finding_kinds": [],
+        "id": "new_claim_not_fact_checked",
+        "matched_expectation": true,
+        "purpose": "Limitation: additions are not fact-checked."
+      },
+      {
+        "actual": "REVIEWED",
+        "expected": "REVIEWED",
+        "finding_kinds": [],
+        "id": "human_error_can_pass",
+        "matched_expectation": true,
+        "purpose": "Limitation: a wrong human assertion can pass token checks."
+      }
+    ],
+    "matched_expectation": 36,
+    "total": 36
+  },
+  "code_sha256": {
+    "build_backend.py": "23180fd08026af0d47c8ae9abc7434a748daac70292d3cc4bb96efc4e24860ea",
+    "edit_auditor/__init__.py": "e6d2ca646d88c018d676612332d29f968bd8f605cf1d4ede3379a5c84c945d86",
+    "edit_auditor/__main__.py": "963999eb302e2c7b89c2bedd5ca6c74029bab4023de540b092183f3d344fe5c5",
+    "edit_auditor/cli.py": "effc7167ca803b24ed85d842556219ff397d6e91a3c4754d4ef21263e7acefda",
+    "edit_auditor/core.py": "bb55716d481d8868900a0e80da691fb7abfde872dfb27dfcb30babc99be02b93",
+    "pyproject.toml": "626496619c2c45ae56892e87e692a19841bb3f3103898a05985cdf880e3575ed",
+    "tests/__init__.py": "688e8fa820c31c4bc47dd2141888524595a694ca06a6bb948f70c536ecb4216f",
+    "tests/test_auditor.py": "9dfc85f0c6d357dc52ad0b5a885836ae833be7dc3b2317ff9cc564deb0fa980a",
+    "tools/build_release.py": "4db86c32cc9bfc223df2ef95fa23c6fc25118d615a4745369db8e520e380beee",
+    "tools/check_artifacts.py": "37a65edd358278faba6a1f06f22f7c6babaf389b7ea900c9de25e1d0c6711989",
+    "tools/validate.py": "e99753adb8d90ec2574d2b8fe6a8d47cfa3e4615f62e0ce82c9a173fd972ecf8"
+  },
+  "comparison_plan": {
+    "grain": "one unit test, authored scenario, or deterministic generated case",
+    "population": "included synthetic cases only",
+    "presentation": "prose totals and inspectable case receipts; no accuracy or comparative-performance chart",
+    "question": "Does this implementation behave according to its documented conservative contract?",
+    "reason": "This is a software validation receipt, not an observational dataset or sampled benchmark.",
+    "units": "checks, not users or documents sampled from production"
+  },
+  "environment": {
+    "implementation": "CPython",
+    "machine": "x86_64",
+    "os": "Linux",
+    "python": "3.13.15"
+  },
+  "generated_checks": {
+    "cases": [
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-01",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-01",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-01",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-01",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-02",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-02",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-02",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-02",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-03",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-03",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-03",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-03",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-04",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-04",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-04",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-04",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-05",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-05",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-05",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-05",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-06",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-06",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-06",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-06",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-07",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-07",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-07",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-07",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-08",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-08",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-08",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-08",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-09",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-09",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-09",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-09",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-10",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-10",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-10",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-10",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-11",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-11",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-11",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-11",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-12",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-12",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-12",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-12",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-13",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-13",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-13",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-13",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-14",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-14",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-14",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-14",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-15",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-15",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-15",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-15",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-16",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-16",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-16",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-16",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-17",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-17",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-17",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-17",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-18",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-18",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-18",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-18",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-19",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-19",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-19",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-19",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-20",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-20",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-20",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-20",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-21",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-21",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-21",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-21",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-22",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-22",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-22",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-22",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-23",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-23",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-23",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-23",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-24",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-24",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-24",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-24",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-25",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-25",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-25",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-25",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-26",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-26",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-26",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-26",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-27",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-27",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-27",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-27",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-28",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-28",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-28",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-28",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-29",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-29",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-29",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-29",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-30",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-30",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-30",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-30",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-31",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-31",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-31",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-31",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-32",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-32",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-32",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-32",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-33",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-33",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-33",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-33",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-34",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-34",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-34",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-34",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-35",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-35",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-35",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-35",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-36",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-36",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-36",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-36",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-37",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-37",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-37",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-37",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-38",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-38",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-38",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-38",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-39",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-39",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-39",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-39",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-40",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-40",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-40",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-40",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-41",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-41",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-41",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-41",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-42",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-42",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-42",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-42",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-43",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-43",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-43",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-43",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-44",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-44",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-44",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-44",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-45",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-45",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-45",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-45",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-46",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-46",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-46",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-46",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-47",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-47",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-47",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-47",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-48",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-48",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-48",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-48",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-49",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-49",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-49",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-49",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-50",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-50",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-50",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-50",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-51",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-51",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-51",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-51",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-52",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-52",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-52",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-52",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-53",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-53",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-53",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-53",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-54",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-54",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-54",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-54",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-55",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-55",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-55",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-55",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-56",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-56",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-56",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-56",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-57",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-57",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-57",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-57",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-58",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-58",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-58",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-58",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-59",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-59",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-59",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-59",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-60",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-60",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-60",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-60",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-61",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-61",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-61",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-61",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-62",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-62",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-62",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-62",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-63",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-63",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-63",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-63",
+        "matched_expectation": true
+      },
+      {
+        "actual": "EXACT",
+        "expected": "EXACT",
+        "id": "identity-64",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "append-64",
+        "matched_expectation": true
+      },
+      {
+        "actual": "NEEDS_REVIEW",
+        "expected": "NEEDS_REVIEW",
+        "id": "remove_last-64",
+        "matched_expectation": true
+      },
+      {
+        "actual": "COVERED",
+        "expected": "COVERED",
+        "id": "line_endings-64",
+        "matched_expectation": true
+      }
+    ],
+    "matched_expectation": 256,
+    "total": 256
+  },
+  "independent_checks": {
+    "authored_totals_recount_match": true,
+    "fixture_files_unchanged": true,
+    "generated_totals_recount_match": true,
+    "source_files_unchanged": true,
+    "unit_total_recount_matches": true
+  },
+  "input_sha256": {
+    "examples/absorption/after.md": "8d2d7a55fbee5924a57b73cdca8cb823c5870db15328785a1557199f84e4a428",
+    "examples/absorption/before.md": "704e24a6db48782df090dac3d6cf503464a0e304ca9593418ab43c594a8313ec",
+    "examples/addition/after.md": "ed92b5ffc3f4a6c267596d7b39391b5a073acb9da7d0a8b3a712a42c1f3ef5dc",
+    "examples/addition/before.md": "a5b6d44774f684cbfc2eb821a3c9ff8a3de0ebc33ee8b5eb23c03bf308428301",
+    "examples/duplicate/after.md": "53e79c37abf291363ce47e5f11c00e70fe8e4ead9e9f5ce0b1f8336a06401622",
+    "examples/duplicate/before.md": "abac65bba73b17278ef12722ca6434b8f4526e19f36eee249c7d8bfc28466dd9",
+    "examples/loss/after.md": "a5b6d44774f684cbfc2eb821a3c9ff8a3de0ebc33ee8b5eb23c03bf308428301",
+    "examples/loss/before.md": "c4e06fe8daaeb81603ed417f272dc46c7706c9ce90d4fe17c1472453b607c9a6",
+    "fixtures/corpus.json": "3c946dd62620bcf31dd3590c2966e27e2886fa4bad6920e0a2fc18a813f30695"
+  },
+  "interpretation": "Matching an expected limitation outcome is not evidence of semantic correctness. Review approvals in fixtures are fictional. No platform other than the recorded environment is claimed tested.",
+  "project": "Edit Auditor",
+  "run_id": "20261117T220117505234Z",
+  "run_utc": "2026-11-17T22:01:17.505234+00:00",
+  "schema_version": "1.0",
+  "scope": "Synthetic regression checks only; no real-user corpus, network, performance benchmark, semantic-accuracy estimate, or independent security review.",
+  "unit_tests": {
+    "errors": 0,
+    "failed": 0,
+    "passed": 95,
+    "passed_ids": [
+      "test_auditor.AuditTests.test_absorption_approved",
+      "test_auditor.AuditTests.test_append",
+      "test_auditor.AuditTests.test_blank_spacing_change",
+      "test_auditor.AuditTests.test_changed_code_always_flagged",
+      "test_auditor.AuditTests.test_checkbox_change",
+      "test_auditor.AuditTests.test_deterministic",
+      "test_auditor.AuditTests.test_duplicate_approved",
+      "test_auditor.AuditTests.test_duplicate_occurrences_not_silently_collapsed",
+      "test_auditor.AuditTests.test_empty_exact",
+      "test_auditor.AuditTests.test_exact",
+      "test_auditor.AuditTests.test_final_newline_change",
+      "test_auditor.AuditTests.test_heading_context_change",
+      "test_auditor.AuditTests.test_include_text_is_explicit",
+      "test_auditor.AuditTests.test_inline_code_change",
+      "test_auditor.AuditTests.test_line_endings_not_byte_equality",
+      "test_auditor.AuditTests.test_lost_values_redacted_by_default",
+      "test_auditor.AuditTests.test_many_to_one_absorption",
+      "test_auditor.AuditTests.test_markup_report_fence_safety",
+      "test_auditor.AuditTests.test_missing_constraint",
+      "test_auditor.AuditTests.test_missing_link_stays_open",
+      "test_auditor.AuditTests.test_missing_number_stays_open",
+      "test_auditor.AuditTests.test_missing_relative_link",
+      "test_auditor.AuditTests.test_no_text_by_default",
+      "test_auditor.AuditTests.test_one_to_many_absorption",
+      "test_auditor.AuditTests.test_order_acknowledgement",
+      "test_auditor.AuditTests.test_order_change",
+      "test_auditor.AuditTests.test_plan_never_approves",
+      "test_auditor.AuditTests.test_plan_preserves_existing_approvals_and_adds_pending_findings",
+      "test_auditor.AuditTests.test_removal",
+      "test_auditor.AuditTests.test_rephrase_not_automatic",
+      "test_auditor.AuditTests.test_review_not_mutated",
+      "test_auditor.AuditTests.test_semantic_equivalence_is_not_claimed",
+      "test_auditor.AuditTests.test_trailing_blank_change",
+      "test_auditor.AuditTests.test_untrusted_code_not_executed",
+      "test_auditor.BlockTests.test_atx_headings",
+      "test_auditor.BlockTests.test_empty_and_blank",
+      "test_auditor.BlockTests.test_fenced_code_opaque",
+      "test_auditor.BlockTests.test_heading_context_pop",
+      "test_auditor.BlockTests.test_line_numbers",
+      "test_auditor.BlockTests.test_list_items",
+      "test_auditor.BlockTests.test_notion_nested_container",
+      "test_auditor.BlockTests.test_protected_token_families",
+      "test_auditor.BlockTests.test_quote_group",
+      "test_auditor.BlockTests.test_reference_definition",
+      "test_auditor.BlockTests.test_self_closing_container",
+      "test_auditor.BlockTests.test_setext_heading",
+      "test_auditor.BlockTests.test_space_and_unicode_preserved",
+      "test_auditor.BlockTests.test_table_opaque",
+      "test_auditor.BlockTests.test_tilde_fence",
+      "test_auditor.BlockTests.test_unclosed_fence",
+      "test_auditor.CLITests.test_audit_stdout",
+      "test_auditor.CLITests.test_directory_input_rejected",
+      "test_auditor.CLITests.test_existing_output_refused",
+      "test_auditor.CLITests.test_fifo_rejected_without_reading",
+      "test_auditor.CLITests.test_help",
+      "test_auditor.CLITests.test_invalid_exit_two",
+      "test_auditor.CLITests.test_markdown_output",
+      "test_auditor.CLITests.test_new_report",
+      "test_auditor.CLITests.test_no_absolute_paths_in_report",
+      "test_auditor.CLITests.test_output_source_refused",
+      "test_auditor.CLITests.test_plan_pending",
+      "test_auditor.CLITests.test_restricted_stdout_encoding_is_error_not_review_verdict",
+      "test_auditor.CLITests.test_review_exit_one",
+      "test_auditor.CLITests.test_review_input_not_overwritten",
+      "test_auditor.CLITests.test_source_files_unchanged",
+      "test_auditor.CLITests.test_source_text_opt_in",
+      "test_auditor.CLITests.test_symlink_output_refused",
+      "test_auditor.CLITests.test_version",
+      "test_auditor.ValidationTests.test_approval_requires_boolean",
+      "test_auditor.ValidationTests.test_approved_needs_rationale",
+      "test_auditor.ValidationTests.test_approved_needs_reviewer",
+      "test_auditor.ValidationTests.test_approved_needs_target",
+      "test_auditor.ValidationTests.test_block_count_limit",
+      "test_auditor.ValidationTests.test_block_size_limit",
+      "test_auditor.ValidationTests.test_duplicate_decision",
+      "test_auditor.ValidationTests.test_duplicate_json_keys",
+      "test_auditor.ValidationTests.test_duplicate_requires_literal_match",
+      "test_auditor.ValidationTests.test_duplicate_targets",
+      "test_auditor.ValidationTests.test_input_size_limit",
+      "test_auditor.ValidationTests.test_missing_field",
+      "test_auditor.ValidationTests.test_no_deletion_disposition",
+      "test_auditor.ValidationTests.test_non_utf8",
+      "test_auditor.ValidationTests.test_nonfinite_json",
+      "test_auditor.ValidationTests.test_nul",
+      "test_auditor.ValidationTests.test_optional_label_type",
+      "test_auditor.ValidationTests.test_pending_review_has_no_effect",
+      "test_auditor.ValidationTests.test_plan_rejects_unrelated_review",
+      "test_auditor.ValidationTests.test_schema_version",
+      "test_auditor.ValidationTests.test_stale_review",
+      "test_auditor.ValidationTests.test_unknown_acknowledgement",
+      "test_auditor.ValidationTests.test_unknown_field",
+      "test_auditor.ValidationTests.test_unknown_source",
+      "test_auditor.ValidationTests.test_unknown_target",
+      "test_auditor.ValidationTests.test_wrong_input_type",
+      "test_auditor.ValidationTests.test_wrong_top_level"
+    ],
+    "run": 95,
+    "skipped": 0
+  },
+  "version": "0.1.0"
+}
